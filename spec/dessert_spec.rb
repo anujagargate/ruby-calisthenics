@@ -2,7 +2,7 @@ require 'dessert'
 require 'byebug'
 RSpec.configure { |config| config.expect_with(:rspec) { |c| c.syntax = :should }}
 
-describe Dessert, :pending => true do
+describe Dessert
   describe 'cake' do
     before :each do
       @subject = Dessert.new('cake', 400)
@@ -42,9 +42,9 @@ describe Dessert, :pending => true do
       @dessert.name.should == 'ice cream'
     end
   end
-end
 
-describe JellyBean, :pending => true do
+
+describe JellyBean #, :pending => true do
   describe 'when non-licorice' do
     before :each do
       @subject = JellyBean.new('vanilla')
@@ -67,4 +67,4 @@ describe JellyBean, :pending => true do
       @subject.should_not be_delicious
     end
   end
-end
+#end
